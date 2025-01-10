@@ -29,7 +29,30 @@ export function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
       setInput('')
       // Simulate bot response
       setTimeout(() => {
-        setMessages(prev => [...prev, { text: "Thank you for your message. I'm analyzing your data and will provide insights shortly.", sender: 'bot' }])
+        setMessages((prev) => [
+          ...prev,
+          {
+            text: `Based on the analysis of your Instagram data, here’s what I found and recommend to boost your reach:
+        
+            Insights:
+            - **Top-performing content**: Your Reels and carousel posts consistently receive higher engagement compared to static posts. Videos with engaging storytelling or humor tend to perform best.
+            - **Audience activity**: Your audience is most active between 6 PM and 9 PM, especially on weekdays.
+            - **Hashtag usage**: Posts with 10-15 relevant hashtags perform better. However, some hashtags are oversaturated, so niche ones are more effective.
+            - **Engagement trends**: Content that sparks conversation (polls, questions, or controversial opinions) sees higher engagement.
+        
+            Recommendations:
+            1. **Double down on Reels**: Create short, engaging videos with trending audio. Behind-the-scenes, how-tos, and transformation videos align well with your audience's interests.
+            2. **Optimize captions**: Use storytelling or ask questions to encourage comments.
+            3. **Consistency**: Post at least 4-5 times a week, focusing on quality over quantity.
+            4. **Collaborations**: Partner with influencers or accounts in your niche to tap into new audiences.
+            5. **Interactive Stories**: Use polls, quizzes, and Q&A to engage your audience daily.
+            6. **Experiment**: Test new content formats like memes or infographics to see what resonates.
+        
+            If you'd like me to refine this based on your actual preferences or niche, let me know!`,
+            sender: "bot",
+          },
+        ]);
+        
       }, 1000)
     }
   }
